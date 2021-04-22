@@ -8,7 +8,8 @@ provider "aws" {
 module "vpc_subnets" {
   name                 = "${var.project}-${terraform.env}-vpc"
   source               = "./modules/vpc"
-  environment          = "${terraform.env}"
+#   environment          = "${terraform.env}"
+  environemnt ="dev"
   enable_dns_support   = true
   enable_dns_hostnames = true
   vpc_cidr             = "${var.vpc_cidr}"
